@@ -1,0 +1,163 @@
+📓 Calendar UI/UX Project Full Design Specification
+🖼 Overall Aesthetic:
+Theme: Minimalistic, Light, Soft, Calm
+
+Purpose: Should "disappear" into the background until needed, focusing attention on scheduled tasks.
+
+Design Philosophy:
+
+No heavy shadows, no deep contrasts.
+
+Soothing soft colors with small animated hints.
+
+Functional beauty: Everything has a reason to exist.
+
+🎨 Color Palette:
+
+Use case	Color Hex	Description
+Primary Color	#4DD0E1	Soft Teal (Used for highlights like the active tab)
+Accent Color	#26A69A	Deeper Calm Teal (Hover interactions)
+Background	#F9FAFB	Light Grayish White (Main canvas)
+Card Background	#FFFFFF	Pure White (for contrast on smaller panels)
+Text Primary	#111827	Very Dark Gray (not full black, easy on eyes)
+Text Secondary	#6B7280	Muted Gray (for labels, hints)
+Divider Lines	#E5E7EB	Soft Light Gray (thin lines like separators)
+Hover Background	#E0F7FA	Very pale blue-teal (hover feedback)
+🔤 Typography:
+Primary Font: Inter (or fallback system-ui, sans-serif)
+
+Font Style: Semi-rounded, humanist, highly legible even at small sizes.
+
+Font Weights:
+
+Regular (400) for body text
+
+Medium (500) for labels and buttons
+
+Semi-bold (600) for active states or important headers
+
+
+Element	Size	Weight	Notes
+Title	24px	600	Top headers (like "Calendar")
+Sub-header	18px	500	Section labels
+Body text	16px	400	Task names, event info
+Small text	12px	400	Date labels, secondary hints
+📐 Layout and Grids:
+Page Width: Max 1200px (centered)
+
+Mobile Responsive:
+
+Bottom bar remains docked at bottom, width 90%
+
+Grid collapses from 3×4 (desktop Year View) → 2×6 → 1×12 (mobile)
+
+Spacing Rules:
+
+16px margin between major sections
+
+8px padding inside buttons, fields, tags
+
+🧩 Components
+BottomBar (Year | Month | Week | Day Toggle)
+Rounded full pill shape (border-radius: 9999px)
+
+Slight inner padding (p-2)
+
+Active tab:
+
+Background color: #4DD0E1 (primary)
+
+Text color: White
+
+Smooth transition: 150ms ease-in-out
+
+Inactive tabs:
+
+Transparent background
+
+Black text
+
+Hover state: Light teal hover (#E0F7FA)
+
+Calendar Panels (Day, Week, Month)
+Based on FullCalendar rendered view
+
+Minimal toolbar (no built-in FC toolbar)
+
+No hard borders — just gentle 1px lines (#E5E7EB)
+
+Event tags:
+
+Rounded rectangles
+
+Light teal fill (#E0F7FA)
+
+Text: Primary color for task names
+
+Year View (Grid of Months)
+3x4 grid
+
+Each month:
+
+Card (div) with slight elevation
+
+Card background: Pure white #FFFFFF
+
+Inner shadow (box-shadow: 0 1px 4px rgba(0,0,0,0.05))
+
+Hover effect: Slight scale up (scale(1.02))
+
+Inside each card:
+
+Centered month name (bold)
+
+Small dots if any events scheduled
+
+✨ Animation and Motion
+All animations use Framer Motion.
+
+Principles: Subtle, almost invisible motion.
+
+
+Element	Animation	Timing	Notes
+BottomBar tabs	Fade + slight grow when active	150ms	Smooth highlight transition
+View Switch	Slide left/right + fade	300ms	Animate between Year, Month, Week, Day
+Hover effects	Background fill expansion	150ms	Hover button or card
+Click/Tap	Quick scale down on tap	100ms	Immediate tactile feedback
+🎮 Interaction Details
+Tap anywhere outside bottom bar: no action (only tab button switches view)
+
+Long tap/hover: no new behavior (keep clean)
+
+Keyboard Navigation:
+
+Tab key navigates across bottom bar options
+
+Enter selects a mode
+
+Drag/Scroll:
+
+Week view and Day view allow horizontal scroll on mobile
+
+🖥 Device Responsiveness
+
+Device	Adjustment
+Desktop	Full 1200px centered layout
+Tablet	Shrink grid to 2 columns (YearView)
+Mobile	1 column, sticky bottom bar
+⚡ Accessibility
+WCAG 2.1 AA Compliance
+
+High contrast between active button and background
+
+Keyboard focus outlines visible
+
+All interactive elements > 44px tap target
+
+🔥 Summary
+A clean, modern calendar app, softly colored, minimal UI, where the interface becomes almost invisible until you need it. Smooth, gentle animations. Everything is optimized for focus, efficiency, and calmness.
+
+Would you also like me to prepare a ready-made Replit zip that includes everything already scaffolded according to this style guide? 🚀
+(then you just unzip > upload to Replit > run)
+
+Would you like that? 🎯
